@@ -1,84 +1,64 @@
+function animateTyping() {
+    const technologies = ["React.js", "JavaScript", "TypeScript", "Node.js", "HTML5", "CSS3", "Git"];
+    let isDeleting = false;
+    let isPaused = false;
+    let currentIndex = 0;
+    let charIndex = 0;
 
-const sections = document.querySelectorAll('.scroll-reveal');
-
-const options = {
-    threshold: 0.15
-};
-
-const observer = new IntersectionObserver(function (entries, observer) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return;
-        } else {
-            entry.target.classList.add('reveal');
-            observer.unobserve(entry.target);
-        }
-    });
-}, options);
-
-sections.forEach(section => {
-    observer.observe(section);
-
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'all 0.6s ease-out';
-});
-
-
-document.head.insertAdjacentHTML('beforeend', '<style>.reveal { opacity: 1 !important; transform: translateY(0) !important; }</style>');
-
-function language() {
-
-    let tabLang = ["React.js", "JavaScript", "Node.js", "Html", "Css", "Git"];
-    let i = 0;
-    let j = 0;
-    let delet = false;
-    let wait = false;
-
-    let write = document.getElementById("lang");
-
+    const element = document.getElementById("lang");
     setInterval(() => {
-
-        if (wait) {
+        if (isPaused) {
             return;
         }
+        const currentTech = technologies[currentIndex % technologies.length];
 
-        let word = tabLang[i];
-
-
-        if (i === tabLang.length) {
-            i = 0;
-            word = tabLang[i];
-        }
-
-        if (!delet) {
-
-            write.textContent = word.substr(0, j);
-
-            if (j === word.length) {
-                delet = true;
-                wait = true;
-
+        if (!isDeleting) {
+            element.textContent += currentTech[charIndex]
+            charIndex++;
+            if (currentTech.length == charIndex) {
+                isDeleting = true;
+                isPaused = true;
                 setTimeout(() => {
-                    wait = false;
-                }, 300);
+                    isPaused = false;
+                }, 600);
 
-            } else {
-                j++;
             }
-
         } else {
+            charIndex--;
+            element.textContent = currentTech.substr(0, charIndex);
 
-            j--;
-            write.textContent = word.substr(0, j);
-
-            if (j === 0) {
-                delet = false;
-                i++;
+            if (charIndex == 0) {
+                currentIndex++;
+                isDeleting = false;
             }
         }
+    }, 200)
+} animateTyping()
 
-    }, 150)
-}
+function Count() {
+    const counters = document.querySelectorAll(".stat-number");
 
-language();
+    counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+
+        let count = 0;
+
+        const interval = setInterval(() => {
+            count++;
+            counter.textContent = count;
+
+            if (count === target) {
+                clearInterval(interval);
+            }
+        }, 10);
+    });
+} Count()
+
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+        hero.style.opacity = 1 - scrolled / 800;
+    }
+});

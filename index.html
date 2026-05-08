@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Front-End Developer Portfolio - matixxx360xx">
-    <title>matixxx360xx | Ultra Front-End</title>
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <title>matixxx360xx | Ultra Front-End Developer</title>
 </head>
 
 <body>
-
     <div class="area">
         <ul class="circles">
             <li></li>
@@ -29,124 +28,262 @@
         </ul>
     </div>
 
-    <nav>
-        <div class="container nav-container">
-            <a href="#" class="logo">matixxx<span class="highlight">360xx</span></a>
+    <div class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-bracket">&lt;</span>
+            matixxx<span class="highlight">360xx</span>
+            <span class="logo-bracket">/&gt;</span>
+        </a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">O mnie</a>
+            <a href="#tech" class="nav-link">Tech Stack</a>
+            <a href="#project" class="nav-link">Projekty</a>
+            <a href="#contact" class="nav-link">Kontakt</a>
         </div>
-    </nav>
+    </div>
 
-    <main class="container">
-
-        <header class="hero section glass">
+    <div class="container">
+        <div class="hero">
             <div class="hero-content">
-                <h1>Cześć, jestem Mateusz.</h1>
-                <p class="tagline">Tworzę nowoczesne, interaktywne interfejsy <span class="highlight">Front-End</span>.
+                <div class="hero-tag"><span class="status-dot"></span>Dostępny do projektów</div>
+                <h1>Cześć, jestem</h1>
+                <h1 class="gradient-text">Mateusz<span class="dot">.</span></h1>
+                <p class="tagline">Tworzę <span class="highlight-animated">nowoczesne</span>,
+                    <span class="highlight-animated">interaktywne</span>
+                    interfejsy
+                    <span class="gradient-text">Front-End</span>.
                 </p>
+                <p class="hero-description">Developer, który łączy piękny design
+                    z wydajnym kodem.
+                    Specjalizuję się w React.js i optymalizacji performance.</p>
+
                 <div class="hero-btns">
-                    <a href="#projects" class="btn primary-btn">Moje Projekty</a>
-                    <a href="#contact" class="btn secondary-btn">Skontaktuj się</a>
+                    <a class="btn primary-btn" href="#project"><span>Moje Projekty</span></a>
+                    <a class="btn secondary-btn" href="#contact"><span>Skontaktuj się</span></a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="250">250</span>
+                        <span class="stat-label">Rozwiązanych zadań (Codewars + LeetCode)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="2">2</span>
+                        <span class="stat-label">Zrealizowane projekty komercyjne</span>
+                    </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="code-visual glass">
-                    <pre><code>
-<span class="tag">&lt;</span><span class="tag">div</span> <span class="attr">class</span>=<span class="val">"skill"</span><span class="tag">&gt;</span>
-&nbsp;&nbsp;<span id="lang">React.js</span>
-<span class="tag">&lt;/</span><span class="tag">div</span><span class="tag">&gt;</span>
-                    </code></pre>
+
+            <div class="code-visual glass">
+                <div class="code-header">
+                    <span class="red"></span><span class="yellow"></span><span class="green"></span><span
+                        class="code-name">App.jsx</span>
                 </div>
+                <pre><code><span class="keyword">const</span> <span class="function">Developer</span> <span class="operator">=</span> <span class="bracket">()</span> <span class="operator">=&gt;</span> <span class="bracket">{</span>
+  <span class="keyword">return</span> <span class="bracket">(</span>
+     <span class="tag">&lt;</span><span class="tag-name">div</span> <span class="attr">className</span><span class="operator">=</span><span class="val">"passion"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;</span><span class="tag-name">h1</span><span class="tag">&gt;</span><span id="lang"></span><span class="tag">&lt;/</span><span class="tag-name">h1</span><span class="tag">&gt;</span>
+     <span class="tag">&lt;/</span><span class="tag-name">div</span><span class="tag">&gt;</span>
+    <span class="bracket">)</span>
+<span class="bracket">}</span></code></pre>
             </div>
-        </header>
-
-        <section id="about" class="section glass scroll-reveal">
-            <h2><i class="fas fa-user-tie"></i> O mnie</h2>
-            <p>Front-End Developer, który nie boi się logiki pod maską. Łączę nowoczesny design w React z solidną
-                znajomością struktur danych i algorytmów. Skupiam się na budowaniu
-                czystych interfejsów i optymalizacji kodu tak, aby aplikacje były nie tylko ładne, ale i piekielnie
-                szybkie.</p>
-        </section>
-
-        <section id="skills" class="section glass scroll-reveal">
-            <h2><i class="fas fa-code"></i> Tech Stack</h2>
-            <div class="skills-grid">
-                <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
-                <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3 / SASS</span></div>
-                <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript (ES6+)</span></div>
-                <div class="skill-item"><i class="fab fa-react"></i><span>React.js</span></div>
-                <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
-                <div class="skill-item"><i class="fas fa-mobile-alt"></i><span>Responsive Design</span></div>
+        </div>
+        <div class="abaut glass" id="about">
+            <div class="section-header">
+                <h2><span class="user-tie"></span><span> O mnie</span></h2>
+                <div class="section-line"></div>
             </div>
-        </section>
-
-        <section id="projects" class="section glass scroll-reveal">
-            <h2><i class="fas fa-project-diagram"></i> Projekty</h2>
-            <div class="projects-grid">
-                <article class="project-card glass">
-                    <h3>Windows 11 Desktop Environment</h3>
-                    <p>Kompleksowa replika interfejsu systemowego Windows 11 zbudowana w technologii webowej.
-                        Skupiony na wysokiej wydajności renderowania i pixel-perfect design.
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">Front-End Developer, który nie boi się logiki pod maską.</p>
+                    <p>
+                        Łączę nowoczesny design w <strong>React</strong> z solidną znajomością
+                        struktur danych i algorytmów. Skupiam się na budowaniu czystych interfejsów
+                        i optymalizacji kodu tak, aby aplikacje były nie tylko ładne,
+                        ale i <span class="highlight">piekielnie szybkie</span>.
                     </p>
-                    <div class="project-tags">
-                        <span>React.js</span><span>Framer Motion (Animations)</span><span>Fluent UI / Material
-                            UI</span><span>CSS Grid Layout</span>
+                    <div class="about-highlights">
+                        <div class="highlights-items"><span class="circle-check"></span>Clean Code & Best Practices
+                        </div>
+                        <div class="highlights-items"><span class="circle-check"></span>Performance Optimization</div>
+                        <div class="highlights-items"><span class="circle-check"></span>Responsive Design</div>
+                        <div class="highlights-items"><span class="circle-check"></span>Modern UI/UX</div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/matixxx360xx/win11-web" target="_blank"><i
-                                class="fab fa-github"></i> Kod</a>
-                    </div>
-                </article>
-                <article class="project-card glass">
-                    <h3>Blackjack Elite: Casino Experience</h3>
-                    <p>Interaktywna gra karciana zbudowana w czystym JavaScript. Silnik gry obsługuje pełną logikę
-                        kasynową: losowanie z talii 52 kart,
-                        inteligentne zachowanie krupiera (AI dealer logic) oraz system rozliczania punktów w czasie
-                        rzeczywistym.
-                        Projekt kładzie nacisk na asynchroniczność (opóźnienia animacji kart) oraz responsywny,
-                        luksusowy interfejs użytkownika.</p>
-                    <div class="project-tags">
-                        <span>HTML5</span><span>CSS</span><span>Vanilla JavaScript</span><span>Array Shuffle
-                            Algorithms</span><span>DOM Manipulation</span><span>CSS Animations</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/matixxx360xx/black-jack" target="_blank"><i
-                                class="fab fa-github"></i> Kod</a>
-                        <a href="https://matixxx360xx.github.io/black-jack/" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </article>
+                </div>
             </div>
-        </section>
+        </div>
+        <div class="skills glass" id="tech">
+            <div class="section-header">
+                <h2><span class="code-tie"></span><span> Tech Stack</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="section-skill">
+                <div class="skill-item">
+                    <div class="skill-icon html"></div>
+                    <span class="skill-name">HTML5</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon css"></div>
+                    <span class="skill-name">CSS3</span>
+                </div>
 
-        <section id="contact" class="section glass scroll-reveal">
-            <h2><i class="fas fa-paper-plane"></i> Powiedz 'Cześć'</h2>
-            <p>Jestem otwarty na nowe wyzwania i projekty. Skontaktuj się ze mną lub sprawdź moje postępy w algorytmice.
+                <div class="skill-item">
+                    <div class="skill-icon js"></div>
+                    <span class="skill-name">JavaScript (ES6+)</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon node"></div>
+                    <span class="skill-name">Node.js</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon react"></div>
+                    <span class="skill-name">React.js</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon git"></div>
+                    <span class="skill-name">Git</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon rp"></div>
+                    <span class="skill-name">Responsive Design</span>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="projects glass" id="project">
+            <div class="section-header">
+                <h2><span class="code-projects"></span><span> Projekty</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="section-projects">
+                <div class="project-card glass">
+                    <div class="header-card">
+                        <div class="icon cube"></div>
+                        <div class="project-number">01</div>
+                    </div>
+                    <div class="section-card">
+                        <h3>Blackjack Elite: Casino Experience</h3>
+                        <p>
+                            Interaktywna gra karciana zbudowana w czystym JavaScript. Silnik gry obsługuje pełną logikę
+                            kasynową: losowanie z talii 52 kart, inteligentne zachowanie krupiera (AI dealer logic)
+                            oraz system rozliczania punktów w czasie rzeczywistym.
+                        </p>
+                        <div class="content-card">
+                            <div class="project-tags">
+                                <span class="tag html-tag">HTML5</span>
+                                <span class="tag css-tag">CSS3</span>
+                                <span class="tag js-tag">Vanilla JS</span>
+                                <span class="tag algorithm-tag">Algorithms</span>
+                                <span class="tag dom-tag">DOM</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/matixxx360xx/black-jack" target="_blank"
+                                    class="project-btn">
+                                    <i class="fab fa-github"></i>
+                                    <span>Kod</span>
+                                </a>
+                                <a href="https://matixxx360xx.github.io/black-jack/" target="_blank"
+                                    class="project-btn-primary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass">
+                    <div class="header-card">
+                        <div class="icon cube"></div>
+                        <div class="project-number">02</div>
+                    </div>
+                    <div class="section-card">
+                        <h3>Windows 11 Desktop Environment</h3>
+                        <p>
+                            Kompleksowa replika interfejsu systemowego Windows 11 zbudowana w technologii webowej.
+                            Skupiony na wysokiej wydajności renderowania i pixel-perfect design.
+                        </p>
+                        <div class="content-card">
+                            <div class="project-tags">
+                                <span class="tag html-tag">HTML5</span>
+                                <span class="tag css-tag">CSS3</span>
+                                <span class="tag js-tag">Vanilla JS</span>
+                                <span class="tag algorithm-tag">Algorithms</span>
+                                <span class="tag dom-tag">DOM</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/matixxx360xx/win11-web" target="_blank" class="project-btn">
+                                    <i class="fab fa-github"></i>
+                                    <span>Kod</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact glass" id="contact">
+            <div class="section-header">
+                <h2><span class="paper-plane"></span><span> Powiedz 'Cześć'</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <p class="contact-intro">
+                Jestem otwarty na nowe wyzwania i projekty. Skontaktuj się ze mną
+                lub sprawdź moje postępy w algorytmice.
             </p>
+            <div class="contact-content">
 
-            <div class="coding-profiles">
                 <a href="https://leetcode.com/matixxx360xx" target="_blank" class="profile-card glass">
-                    <i class="fas fa-code"></i>
-                    <span>LeetCode</span>
+                    <div class="profile-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="profile-name">LeetCode</span>
                     <small>Problem Solving</small>
+                    <div class="profile-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </a>
-                <a href="https://www.codewars.com/users/matixxx360xx" target="_blank" class="profile-card glass">
-                    <i class="fas fa-terminal"></i>
-                    <span>CodeWars</span>
+
+                <a href="https://leetcode.com/matixxx360xx" target="_blank" class="profile-card glass">
+                    <div class="profile-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <span class="profile-name">CodeWars</span>
                     <small>Logic & Clean Code</small>
+                    <div class="profile-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </a>
             </div>
-
             <div class="contact-links">
-                <a href="https://github.com/matixxx360xx" target="_blank" title="Mój GitHub"><i
-                        class="fab fa-github"></i></a>
-                <a href="mailto:matimichalski01@gmail.com" title="Wyślij E-mail"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/matixxx360xx" target="_blank" class="contact-btn" title="Mój GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:matimichalski01@gmail.com" class="contact-btn" title="Wyślij E-mail">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
             </div>
-        </section>
+        </div>
 
-    </main>
-
+    </div>
     <footer class="glass">
-        <p>&copy; 2026 matixxx360xx. Stworzono z <span class="heart">❤</span> w Front-Endzie.</p>
+        <div class="footer-content">
+            <p>
+                © 2026 <span class="highlight">matixxx360xx</span>.
+                Stworzono z <span class="heart">❤</span> w Front-Endzie.
+            </p>
+            <div class="footer-links">
+                <a href="#" class="scroll-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                    Powrót na górę
+                </a>
+            </div>
+        </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 
