@@ -54,6 +54,61 @@ function Count() {
     });
 } Count()
 
+
+const cards = document.querySelectorAll('.project-card');
+
+cards.forEach(card => {
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let isHover = false;
+
+    card.addEventListener("mousemove", (e) => {
+        const d = card.getBoundingClientRect();
+
+        mouseX = e.clientX - d.left;
+        mouseY = e.clientY - d.top;
+    });
+
+    card.addEventListener("mouseenter", () => {
+        isHover = true;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        isHover = false;
+
+        card.style.transform = `
+            perspective(1000px)
+            rotateX(0deg)
+            rotateY(0deg)
+        `;
+    });
+
+    function animate() {
+        if (!isHover) {
+            requestAnimationFrame(animate);
+            return;
+        }
+
+        const d = card.getBoundingClientRect();
+
+        const centerX = d.width / 2;
+        const centerY = d.height / 2;
+
+        const rotateY = -((mouseX - centerX) / centerX) * 15;
+        const rotateX = ((mouseY - centerY) / centerY) * 15;
+
+        card.style.transform = `
+            perspective(1000px)
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+        `;
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+});
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
