@@ -648,9 +648,26 @@ body {
 
 .section-projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
+
+.projects-description {
+    margin-top: 15px;
+    display:flex;
+    align-items: center;
+    justify-self: center;
+    gap: 20px;
+  
+}
+
+.projects-description p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
 
 .content-card {
     margin-top: auto;
@@ -800,6 +817,23 @@ body {
     font-weight: 400;
 }
 
+.react-tag::before {
+    content: "\f41b"; 
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+}
+
+.vite-tag::before {
+    content: "\f0e7"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.webaudio-tag::before {
+    content: "\f0ac";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
 .project-links {
     display: flex;
     gap: 15px;
