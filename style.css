@@ -653,6 +653,7 @@ body {
 }
 
 .projects-description {
+    
     margin-top: 15px;
     display:flex;
     align-items: center;
@@ -1244,6 +1245,15 @@ body {
 
     .btn {
         width: 100%;
+    }
+
+    .projects-description {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .projects-description a {
+        justify-content: center;
     }
 
     .nav-links {
