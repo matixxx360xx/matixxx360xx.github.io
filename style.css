@@ -185,6 +185,18 @@ body {
     }
 }
 
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(6px);
+    }
+}
+
 .hero-content h1 {
     font-size: 4rem;
     line-height: 1.2;
@@ -330,6 +342,20 @@ body {
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: var(--text3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    animation: float 2.5s ease-in-out infinite;
 }
 
 .code-visual {
@@ -653,13 +679,13 @@ body {
 }
 
 .projects-description {
-    
+
     margin-top: 15px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-self: center;
     gap: 20px;
-  
+
 }
 
 .projects-description p {
@@ -732,7 +758,7 @@ body {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     color: rgba(255, 255, 255, 0.3);
-    
+
 }
 
 .cube::before {
@@ -819,13 +845,13 @@ body {
 }
 
 .react-tag::before {
-    content: "\f41b"; 
+    content: "\f41b";
     font-family: "Font Awesome 6 Brands";
     font-weight: 400;
 }
 
 .vite-tag::before {
-    content: "\f0e7"; 
+    content: "\f0e7";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
 }
@@ -835,6 +861,7 @@ body {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
 }
+
 .project-links {
     display: flex;
     gap: 15px;
@@ -1231,6 +1258,14 @@ body {
         display: none;
     }
 
+    .stat-number {
+        font-size: 2.1rem;
+    }
+
+    .stat-label {
+        font-size: 0.5rem;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -1268,5 +1303,9 @@ body {
 @media (max-width: 500px) {
     .project-links {
         flex-direction: column;
+    }
+
+    .projects {
+        padding: 80px 15px;
     }
 }

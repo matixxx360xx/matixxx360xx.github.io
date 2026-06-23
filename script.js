@@ -36,7 +36,7 @@ function animateTyping() {
 } animateTyping()
 
 function Count() {
-    const counters = document.querySelectorAll(".stat-number");
+    const counters = document.querySelectorAll(".stat-number[data-target]");
 
     counters.forEach(counter => {
         const target = +counter.getAttribute("data-target");
